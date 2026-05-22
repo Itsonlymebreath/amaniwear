@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: './',
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
-    locale: 'en_US',
+    locale: 'ar_MA',
     type: 'website',
   },
   alternates: {
@@ -63,8 +63,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html
-      lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      lang="ar"
+      dir="rtl"
+      className={`${space_grotesk.variable} dark scroll-smooth`}
       suppressHydrationWarning
     >
       <link
@@ -91,10 +92,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         color="#5bbad5"
       />
       <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+      <meta name="theme-color" content="#0B0B0B" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
+      <body className="bg-[#0B0B0B] ps-[calc(100vw-100%)] text-[#F5F5F5] antialiased">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
