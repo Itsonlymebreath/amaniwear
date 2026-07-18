@@ -172,6 +172,7 @@ export default function Home() {
               poster="/images/products/collection-display.jpg"
             >
               <source src="/videos/abaya-showcase.mp4" type="video/mp4" />
+              <track kind="captions" />
               المتصفح لا يدعم الفيديو
             </video>
           </div>

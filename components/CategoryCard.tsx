@@ -12,6 +12,7 @@ export default function CategoryCard({ name, description, image, onClick }: Cate
     <div
       className="category-card group cursor-pointer"
       onClick={onClick}
+      onKeyDown={onClick}
       role="button"
       tabIndex={0}
     >
