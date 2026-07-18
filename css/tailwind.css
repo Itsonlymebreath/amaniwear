@@ -7,38 +7,51 @@
 /* Core theme configuration */
 @theme {
   /* Font families */
-  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+  --font-sans: var(--font-tajawal), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-heading: var(--font-playfair), Georgia, serif;
 
-  /* Colors */
-  /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
-  --color-primary-50: #D4AF37;
-  --color-primary-100: #D4AF37;
-  --color-primary-200: #D4AF37;
-  --color-primary-300: #D4AF37;
-  --color-primary-400: #D4AF37;
-  --color-primary-500: #D4AF37;
-  --color-primary-600: #D4AF37;
-  --color-primary-700: #D4AF37;
-  --color-primary-800: #D4AF37;
-  --color-primary-900: #D4AF37;
-  --color-primary-950: #D4AF37;
+  /* Amani Wear Color Palette */
+  --color-primary-50: #FDF8F4;
+  --color-primary-100: #F9EDE0;
+  --color-primary-200: #F0D5B8;
+  --color-primary-300: #E4BB8E;
+  --color-primary-400: #D4A373;
+  --color-primary-500: #C4A882;
+  --color-primary-600: #B08D64;
+  --color-primary-700: #8B6D4A;
+  --color-primary-800: #6B5438;
+  --color-primary-900: #4A3A27;
+  --color-primary-950: #2D2318;
 
-  --color-background: #0B0B0B;
-  --color-text-primary: #F5F5F5;
-  --color-text-secondary: #1A1A1A;
+  --color-accent-50: #FDF2F8;
+  --color-accent-100: #F9E0EC;
+  --color-accent-200: #F0B8D0;
+  --color-accent-300: #E48EAF;
+  --color-accent-400: #D4738F;
+  --color-accent-500: #8B2252;
+  --color-accent-600: #7A1E48;
+  --color-accent-700: #66193C;
+  --color-accent-800: #521430;
+  --color-accent-900: #3D0F24;
+  --color-accent-950: #290A18;
 
-  --color-gray-50: oklch(0.985 0.002 247.839);
-  --color-gray-100: oklch(0.967 0.003 264.542);
-  --color-gray-200: oklch(0.928 0.006 264.531);
-  --color-gray-300: oklch(0.872 0.01 258.338);
-  --color-gray-400: oklch(0.707 0.022 261.325);
-  --color-gray-500: oklch(0.551 0.027 264.364);
-  --color-gray-600: oklch(0.446 0.03 256.802);
-  --color-gray-700: oklch(0.373 0.034 259.733);
-  --color-gray-800: oklch(0.278 0.033 256.848);
-  --color-gray-900: oklch(0.21 0.034 264.665);
-  --color-gray-950: oklch(0.13 0.028 261.692);
+  --color-rose-gold: #C4A882;
+  --color-cream: #FDF8F4;
+  --color-warm-white: #FEFCFA;
+  --color-charcoal: #2D2D2D;
+
+  --color-gray-50: #FAFAF9;
+  --color-gray-100: #F5F5F4;
+  --color-gray-200: #E7E5E4;
+  --color-gray-300: #D6D3D1;
+  --color-gray-400: #A8A29E;
+  --color-gray-500: #78716C;
+  --color-gray-600: #57534E;
+  --color-gray-700: #44403C;
+  --color-gray-800: #292524;
+  --color-gray-900: #1C1917;
+  --color-gray-950: #0C0A09;
 
   /* Line heights */
   --line-height-11: 2.75rem;
@@ -52,27 +65,15 @@
   --z-80: 80;
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
-  html.dark {
-    background-color: #0B0B0B;
-    color: #F5F5F5;
+  html {
+    scroll-behavior: smooth;
   }
-  :root {
-    --color-primary: #D4AF37;
-    --color-text-primary: #F5F5F5;
-    --color-text-secondary: #1A1A1A;
-  }
-  /* Optional helper utility for secondary text */
-  .text-secondary {
-    color: var(--color-text-secondary);
+
+  body {
+    background-color: var(--color-warm-white);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
   }
 
   *,
@@ -96,7 +97,118 @@
   }
 }
 
+/* WhatsApp green button */
 @layer utilities {
+  .btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  }
+
+  .btn-whatsapp:hover {
+    background-color: #20BA5A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(196, 168, 130, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(196, 168, 130, 0.4);
+  }
+
+  .product-card {
+    overflow: hidden;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .product-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+
+  .product-image {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+  }
+
+  .category-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+    transition: opacity 0.4s ease;
+  }
+
+  .category-card:hover::after {
+    background: linear-gradient(to top, rgba(139, 34, 82, 0.8) 0%, rgba(139, 34, 82, 0.2) 60%, transparent 100%);
+  }
+
+  .category-card:hover .category-image {
+    transform: scale(1.08);
+  }
+
+  .category-image {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .float-whatsapp {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    z-index: 50;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #25D366;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+  }
+
+  .float-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+  }
+
+  @keyframes pulse-whatsapp {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6); }
+  }
+
   .prose {
     & a {
       color: var(--color-primary-500);
@@ -118,21 +230,6 @@
       color: var(--color-indigo-500);
     }
   }
-
-  .prose-invert {
-    & a {
-      color: var(--color-primary-500);
-      &:hover {
-        color: var(--color-primary-400);
-      }
-      & code {
-        color: var(--color-primary-400);
-      }
-    }
-    & :where(h1, h2, h3, h4, h5, h6) {
-      color: var(--color-gray-100);
-    }
-  }
 }
 
 .task-list-item::before {
@@ -143,51 +240,18 @@
   @apply list-none;
 }
 
-.footnotes {
-  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
-}
-
-.data-footnote-backref {
-  @apply no-underline;
-}
-
-.csl-entry {
-  @apply my-5;
-}
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition:
     background-color 600000s 0s,
     color 600000s 0s;
-}
-
-.katex-display {
-  overflow: auto hidden;
-}
-
-.content-header-link {
-  opacity: 0;
-  margin-left: -24px;
-  padding-right: 4px;
-}
-
-.content-header:hover .content-header-link,
-.content-header-link:hover {
-  opacity: 1;
-}
-
-.linkicon {
-  display: inline-block;
-  vertical-align: middle;
 }

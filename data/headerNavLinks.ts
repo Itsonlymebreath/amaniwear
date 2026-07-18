@@ -1,7 +1,8 @@
 const headerNavLinks = [
   { href: '/', title: 'الرئيسية' },
-  { href: '/blog', title: 'المدونة' },
-  { href: '/tools', title: 'الأدوات' },
+  { href: '#products', title: 'المنتجات' },
+  { href: '#about', title: 'من نحن' },
+  { href: '#contact', title: 'اتصلي بنا' },
 ]
 
 export default headerNavLinks
