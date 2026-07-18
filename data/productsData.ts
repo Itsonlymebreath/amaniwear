@@ -6,7 +6,14 @@ export interface Product {
   originalPrice?: number | null
   images: string[]
   colors: string[]
-  category: 'abaya-embroidered' | 'abaya-button' | 'abaya-set' | 'collection' | 'abaya-flower' | 'abaya-crinkle' | 'abaya-sleeve'
+  category:
+    | 'abaya-embroidered'
+    | 'abaya-button'
+    | 'abaya-set'
+    | 'collection'
+    | 'abaya-flower'
+    | 'abaya-crinkle'
+    | 'abaya-sleeve'
   featured: boolean
   isNew?: boolean
 }
@@ -16,7 +23,10 @@ const productsData: Product[] = [
   {
     id: 'abaya-embroidered-blue',
     name: { ar: 'عباية مطرزة — أزرق ملكي', fr: 'Abaya Brodée — Bleu Royal' },
-    description: { ar: 'عباية أنيقة بتطريز يدوي فاخر على الأمام والأكمام. قماش خفيف ومريح، مناسبة لجميع المناسبات.', fr: 'Abaya élégante avec broderie artisanale sur le devant et les manches. Tissu léger et confortable.' },
+    description: {
+      ar: 'عباية أنيقة بتطريز يدوي فاخر على الأمام والأكمام. قماش خفيف ومريح، مناسبة لجميع المناسبات.',
+      fr: 'Abaya élégante avec broderie artisanale sur le devant et les manches. Tissu léger et confortable.',
+    },
     price: null,
     images: ['/images/products/abaya-embroidered-blue.jpg'],
     colors: ['أزرق ملكي', 'أسود', 'أخضر زمردي'],
@@ -27,7 +37,10 @@ const productsData: Product[] = [
   {
     id: 'abaya-embroidered-pink',
     name: { ar: 'عباية مطرزة — وردي', fr: 'Abaya Brodée — Rose Poudré' },
-    description: { ar: 'عباية بلون وردي ناعم مع تطريز ذهبي رائع. تصميم عصري يجمع بين الأناقة والاحتشام.', fr: 'Abaya rose poudré avec broderie dorée raffinée. Design moderne alliant élégance et pudeur.' },
+    description: {
+      ar: 'عباية بلون وردي ناعم مع تطريز ذهبي رائع. تصميم عصري يجمع بين الأناقة والاحتشام.',
+      fr: 'Abaya rose poudré avec broderie dorée raffinée. Design moderne alliant élégance et pudeur.',
+    },
     price: null,
     images: ['/images/products/abaya-embroidered-pink.jpg'],
     colors: ['وردي', 'بيج', 'رمادي'],
@@ -35,14 +48,20 @@ const productsData: Product[] = [
     featured: true,
     isNew: true,
   },
-  
+
   // --- NEW EMBROIDERED FRONT ---
   {
     id: 'abaya-embroidered-front-green',
     name: { ar: 'عباية بتطريز أمامي — أخضر', fr: 'Abaya Brodée Devant — Vert' },
-    description: { ar: 'عباية راقية بتطريز أنيق على شكل نجمة أو ألماسة على طول الجهة الأمامية والأكمام.', fr: 'Abaya chic avec broderie élégante (motif étoile/losange) le long du devant et des manches.' },
+    description: {
+      ar: 'عباية راقية بتطريز أنيق على شكل نجمة أو ألماسة على طول الجهة الأمامية والأكمام.',
+      fr: 'Abaya chic avec broderie élégante (motif étoile/losange) le long du devant et des manches.',
+    },
     price: null,
-    images: ['/images/products/abaya-embroidered-front-green.jpg', '/images/products/abaya-embroidered-front-black.jpg'],
+    images: [
+      '/images/products/abaya-embroidered-front-green.jpg',
+      '/images/products/abaya-embroidered-front-black.jpg',
+    ],
     colors: ['أخضر', 'أسود'],
     category: 'abaya-embroidered',
     featured: true,
@@ -53,13 +72,16 @@ const productsData: Product[] = [
   {
     id: 'abaya-sleeve-embroidered',
     name: { ar: 'عباية بتطريز الأكمام', fr: 'Abaya Broderie Manches' },
-    description: { ar: 'عباية يومية بألوان جذابة تتميز بتطريز أوراق الشجر الأنيق على أطراف الأكمام.', fr: 'Abaya de tous les jours aux couleurs attrayantes avec élégante broderie de feuilles sur les manches.' },
+    description: {
+      ar: 'عباية يومية بألوان جذابة تتميز بتطريز أوراق الشجر الأنيق على أطراف الأكمام.',
+      fr: 'Abaya de tous les jours aux couleurs attrayantes avec élégante broderie de feuilles sur les manches.',
+    },
     price: null,
     images: [
-      '/images/products/abaya-sleeve-navy.jpg', 
-      '/images/products/abaya-sleeve-red.jpg', 
-      '/images/products/abaya-sleeve-purple.jpg', 
-      '/images/products/abaya-sleeve-maroon.jpg'
+      '/images/products/abaya-sleeve-navy.jpg',
+      '/images/products/abaya-sleeve-red.jpg',
+      '/images/products/abaya-sleeve-purple.jpg',
+      '/images/products/abaya-sleeve-maroon.jpg',
     ],
     colors: ['أزرق داكن (كحلي)', 'أحمر', 'بنفسجي', 'خمري (بوردو)'],
     category: 'abaya-sleeve',
@@ -71,7 +93,10 @@ const productsData: Product[] = [
   {
     id: 'abaya-flower-collection',
     name: { ar: 'عباية بنقشة الزهور', fr: 'Abaya Motif Floral' },
-    description: { ar: 'عباية صيفية منعشة بتصميم يضم نقوش زهور أنيقة وألوان زاهية، مثالية للإطلالات الكاجوال.', fr: 'Abaya d\'été rafraîchissante avec des motifs floraux élégants et des couleurs vives, parfaite pour un look casual.' },
+    description: {
+      ar: 'عباية صيفية منعشة بتصميم يضم نقوش زهور أنيقة وألوان زاهية، مثالية للإطلالات الكاجوال.',
+      fr: "Abaya d'été rafraîchissante avec des motifs floraux élégants et des couleurs vives, parfaite pour un look casual.",
+    },
     price: null,
     images: [
       '/images/products/abaya-flower-group.jpg',
@@ -81,7 +106,7 @@ const productsData: Product[] = [
       '/images/products/abaya-flower-burgundy.jpg',
       '/images/products/abaya-flower-green.jpg',
       '/images/products/abaya-flower-blue.jpg',
-      '/images/products/abaya-flower-brown.jpg'
+      '/images/products/abaya-flower-brown.jpg',
     ],
     colors: ['بيج', 'برتقالي', 'أسود', 'خمري', 'أخضر', 'أزرق', 'بني'],
     category: 'abaya-flower',
@@ -93,9 +118,15 @@ const productsData: Product[] = [
   {
     id: 'abaya-button-rose-set',
     name: { ar: 'طقم عباية بأزرار — وردي قديم', fr: 'Ensemble Abaya à Boutons — Vieux Rose' },
-    description: { ar: 'طقم عباية مع سروال واسع متناسق. قماش كتان ناعم بأزرار ذهبية أنيقة. قطعة واحدة = إطلالة كاملة.', fr: 'Ensemble abaya avec pantalon large assorti. Lin doux avec boutons dorés élégants.' },
+    description: {
+      ar: 'طقم عباية مع سروال واسع متناسق. قماش كتان ناعم بأزرار ذهبية أنيقة. قطعة واحدة = إطلالة كاملة.',
+      fr: 'Ensemble abaya avec pantalon large assorti. Lin doux avec boutons dorés élégants.',
+    },
     price: null,
-    images: ['/images/products/abaya-button-rose-1.jpg', '/images/products/abaya-button-rose-2.jpg'],
+    images: [
+      '/images/products/abaya-button-rose-1.jpg',
+      '/images/products/abaya-button-rose-2.jpg',
+    ],
     colors: ['وردي قديم', 'أسود', 'كحلي'],
     category: 'abaya-set',
     featured: true,
@@ -103,7 +134,10 @@ const productsData: Product[] = [
   {
     id: 'abaya-button-rose-front',
     name: { ar: 'عباية كتان بأزرار — وردي', fr: 'Abaya Lin à Boutons — Rose' },
-    description: { ar: 'عباية كتان واسعة بأزرار ذهبية مع حقيبة يد متناسقة. ستايل كاجوال أنيق للخروجات اليومية.', fr: 'Abaya en lin ample avec boutons dorés et sac assorti. Style casual chic pour le quotidien.' },
+    description: {
+      ar: 'عباية كتان واسعة بأزرار ذهبية مع حقيبة يد متناسقة. ستايل كاجوال أنيق للخروجات اليومية.',
+      fr: 'Abaya en lin ample avec boutons dorés et sac assorti. Style casual chic pour le quotidien.',
+    },
     price: null,
     images: ['/images/products/abaya-button-rose-2.jpg'],
     colors: ['وردي', 'أسود', 'بيج'],
@@ -113,7 +147,10 @@ const productsData: Product[] = [
   {
     id: 'abaya-button-beige',
     name: { ar: 'عباية بأزرار — بيج ذهبي', fr: 'Abaya à Boutons — Beige Doré' },
-    description: { ar: 'عباية كاجوال أنيقة بأزرار متناسقة. قماش كتان طبيعي مريح للاستعمال اليومي.', fr: 'Abaya casual élégante avec boutons assortis. Lin naturel confortable pour un usage quotidien.' },
+    description: {
+      ar: 'عباية كاجوال أنيقة بأزرار متناسقة. قماش كتان طبيعي مريح للاستعمال اليومي.',
+      fr: 'Abaya casual élégante avec boutons assortis. Lin naturel confortable pour un usage quotidien.',
+    },
     price: null,
     images: ['/images/products/abaya-button-beige.jpg'],
     colors: ['بيج ذهبي', 'زيتي', 'بني', 'خمري'],
@@ -125,7 +162,10 @@ const productsData: Product[] = [
   {
     id: 'abaya-crinkle-blue',
     name: { ar: 'عباية كتان مجعد (كرينكل) بأزرار', fr: 'Abaya Lin Froissé (Crinkle) à Boutons' },
-    description: { ar: 'عباية مريحة جداً بقماش الكرينكل (المجعد) العملي الذي لا يحتاج لكي، مع أزرار أمامية.', fr: 'Abaya très confortable en tissu froissé (crinkle) pratique qui ne nécessite pas de repassage, avec boutons sur le devant.' },
+    description: {
+      ar: 'عباية مريحة جداً بقماش الكرينكل (المجعد) العملي الذي لا يحتاج لكي، مع أزرار أمامية.',
+      fr: 'Abaya très confortable en tissu froissé (crinkle) pratique qui ne nécessite pas de repassage, avec boutons sur le devant.',
+    },
     price: null,
     images: ['/images/products/abaya-crinkle-blue.jpg'],
     colors: ['أزرق (سماوي)'],
@@ -138,7 +178,10 @@ const productsData: Product[] = [
   {
     id: 'collection-multi',
     name: { ar: 'تشكيلة عبايات متنوعة — +10 ألوان', fr: 'Collection Abayas — +10 Coloris' },
-    description: { ar: 'تشكيلة واسعة من العبايات بأزرار بألوان متعددة. اختاري لونك المفضل وتواصلي معنا عبر واتساب — متوفرة بجميع المقاسات.', fr: 'Large collection d\'abayas à boutons en +10 coloris. Choisissez votre couleur et contactez-nous.' },
+    description: {
+      ar: 'تشكيلة واسعة من العبايات بأزرار بألوان متعددة. اختاري لونك المفضل وتواصلي معنا عبر واتساب — متوفرة بجميع المقاسات.',
+      fr: "Large collection d'abayas à boutons en +10 coloris. Choisissez votre couleur et contactez-nous.",
+    },
     price: null,
     images: ['/images/products/collection-display.jpg'],
     colors: ['بيج', 'أسود', 'وردي', 'أزرق', 'بنفسجي', 'أخضر', 'خمري'],
@@ -148,7 +191,10 @@ const productsData: Product[] = [
   {
     id: 'collection-basic',
     name: { ar: 'تشكيلة العبايات الأساسية', fr: 'Collection Abayas Basiques' },
-    description: { ar: 'تشكيلة من العبايات الأساسية بألوان متعددة وتصميم بسيط وراقي لكل يوم.', fr: 'Collection d\'abayas basiques aux multiples couleurs avec un design simple et raffiné pour tous les jours.' },
+    description: {
+      ar: 'تشكيلة من العبايات الأساسية بألوان متعددة وتصميم بسيط وراقي لكل يوم.',
+      fr: "Collection d'abayas basiques aux multiples couleurs avec un design simple et raffiné pour tous les jours.",
+    },
     price: null,
     images: ['/images/products/abaya-basic-group.jpg'],
     colors: ['ألوان متعددة'],
@@ -170,7 +216,7 @@ export const categories = [
   {
     id: 'abaya-flower',
     name: { ar: 'عبايات بنقشة الزهور', fr: 'Abayas Motif Floral' },
-    description: { ar: 'تصاميم صيفية منعشة', fr: 'Designs d\'été rafraîchissants' },
+    description: { ar: 'تصاميم صيفية منعشة', fr: "Designs d'été rafraîchissants" },
     image: '/images/products/abaya-flower-orange.jpg',
   },
   {

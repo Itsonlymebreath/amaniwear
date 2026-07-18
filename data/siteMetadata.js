@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Amani Wear',
   author: 'Amani Wear',
   headerTitle: 'Amani Wear',
-  description: 'عبايات أنيقة وعصرية بجودة عالية — توصيل لجميع مدن المغرب | Abayas élégantes et modernes de haute qualité — Livraison partout au Maroc',
+  description:
+    'عبايات أنيقة وعصرية بجودة عالية — توصيل لجميع مدن المغرب | Abayas élégantes et modernes de haute qualité — Livraison partout au Maroc',
   language: 'ar-MA',
   theme: 'light',
   siteUrl: 'https://amaniwear.ma',

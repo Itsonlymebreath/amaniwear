@@ -61,23 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${tajawal.variable} ${playfair.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <link
-        rel="apple-touch-icon"
-        sizes="76x76"
-        href="/static/favicons/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/static/favicons/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/static/favicons/favicon-16x16.png"
-      />
+      <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png" />
       <meta name="theme-color" content="#FDF8F4" />
       <body className="bg-[#FEFCFA] text-[#2D2D2D] antialiased">
         <Header />

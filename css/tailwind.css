@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@plugin "@tailwindcss/forms";
+@plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 @source '../node_modules/pliny';
 @custom-variant dark (&:where(.dark, .dark *));
@@ -7,51 +7,52 @@
 /* Core theme configuration */
 @theme {
   /* Font families */
-  --font-sans: var(--font-tajawal), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+  --font-sans:
+    var(--font-tajawal), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-heading: var(--font-playfair), Georgia, serif;
 
   /* Amani Wear Color Palette */
-  --color-primary-50: #FDF8F4;
-  --color-primary-100: #F9EDE0;
-  --color-primary-200: #F0D5B8;
-  --color-primary-300: #E4BB8E;
-  --color-primary-400: #D4A373;
-  --color-primary-500: #C4A882;
-  --color-primary-600: #B08D64;
-  --color-primary-700: #8B6D4A;
-  --color-primary-800: #6B5438;
-  --color-primary-900: #4A3A27;
-  --color-primary-950: #2D2318;
+  --color-primary-50: #fdf8f4;
+  --color-primary-100: #f9ede0;
+  --color-primary-200: #f0d5b8;
+  --color-primary-300: #e4bb8e;
+  --color-primary-400: #d4a373;
+  --color-primary-500: #c4a882;
+  --color-primary-600: #b08d64;
+  --color-primary-700: #8b6d4a;
+  --color-primary-800: #6b5438;
+  --color-primary-900: #4a3a27;
+  --color-primary-950: #2d2318;
 
-  --color-accent-50: #FDF2F8;
-  --color-accent-100: #F9E0EC;
-  --color-accent-200: #F0B8D0;
-  --color-accent-300: #E48EAF;
-  --color-accent-400: #D4738F;
-  --color-accent-500: #8B2252;
-  --color-accent-600: #7A1E48;
-  --color-accent-700: #66193C;
+  --color-accent-50: #fdf2f8;
+  --color-accent-100: #f9e0ec;
+  --color-accent-200: #f0b8d0;
+  --color-accent-300: #e48eaf;
+  --color-accent-400: #d4738f;
+  --color-accent-500: #8b2252;
+  --color-accent-600: #7a1e48;
+  --color-accent-700: #66193c;
   --color-accent-800: #521430;
-  --color-accent-900: #3D0F24;
-  --color-accent-950: #290A18;
+  --color-accent-900: #3d0f24;
+  --color-accent-950: #290a18;
 
-  --color-rose-gold: #C4A882;
-  --color-cream: #FDF8F4;
-  --color-warm-white: #FEFCFA;
-  --color-charcoal: #2D2D2D;
+  --color-rose-gold: #c4a882;
+  --color-cream: #fdf8f4;
+  --color-warm-white: #fefcfa;
+  --color-charcoal: #2d2d2d;
 
-  --color-gray-50: #FAFAF9;
-  --color-gray-100: #F5F5F4;
-  --color-gray-200: #E7E5E4;
-  --color-gray-300: #D6D3D1;
-  --color-gray-400: #A8A29E;
-  --color-gray-500: #78716C;
-  --color-gray-600: #57534E;
-  --color-gray-700: #44403C;
+  --color-gray-50: #fafaf9;
+  --color-gray-100: #f5f5f4;
+  --color-gray-200: #e7e5e4;
+  --color-gray-300: #d6d3d1;
+  --color-gray-400: #a8a29e;
+  --color-gray-500: #78716c;
+  --color-gray-600: #57534e;
+  --color-gray-700: #44403c;
   --color-gray-800: #292524;
-  --color-gray-900: #1C1917;
-  --color-gray-950: #0C0A09;
+  --color-gray-900: #1c1917;
+  --color-gray-950: #0c0a09;
 
   /* Line heights */
   --line-height-11: 2.75rem;
@@ -100,7 +101,7 @@
 /* WhatsApp green button */
 @layer utilities {
   .btn-whatsapp {
-    background-color: #25D366;
+    background-color: #25d366;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
@@ -113,7 +114,7 @@
   }
 
   .btn-whatsapp:hover {
-    background-color: #20BA5A;
+    background-color: #20ba5a;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
   }
@@ -166,12 +167,22 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.1) 60%,
+      transparent 100%
+    );
     transition: opacity 0.4s ease;
   }
 
   .category-card:hover::after {
-    background: linear-gradient(to top, rgba(139, 34, 82, 0.8) 0%, rgba(139, 34, 82, 0.2) 60%, transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(139, 34, 82, 0.8) 0%,
+      rgba(139, 34, 82, 0.2) 60%,
+      transparent 100%
+    );
   }
 
   .category-card:hover .category-image {
@@ -189,7 +200,7 @@
     z-index: 50;
     width: 3.5rem;
     height: 3.5rem;
-    background-color: #25D366;
+    background-color: #25d366;
     border-radius: 9999px;
     display: flex;
     align-items: center;
@@ -205,8 +216,13 @@
   }
 
   @keyframes pulse-whatsapp {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6); }
+    0%,
+    100% {
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+      box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6);
+    }
   }
 
   .prose {

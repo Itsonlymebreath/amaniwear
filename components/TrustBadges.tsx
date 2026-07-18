@@ -23,19 +23,19 @@ export default function TrustBadges() {
   ]
 
   return (
-    <section className="py-16 bg-white" id="trust-badges">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="bg-white py-16" id="trust-badges">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="text-center p-8 rounded-2xl bg-[#FDF8F4] hover:shadow-lg transition-all duration-300 group"
+              className="group rounded-2xl bg-[#FDF8F4] p-8 text-center transition-all duration-300 hover:shadow-lg"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-2xl flex items-center justify-center text-3xl shadow-sm group-hover:scale-110 transition-transform duration-300">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-3xl shadow-sm transition-transform duration-300 group-hover:scale-110">
                 {badge.icon}
               </div>
-              <h3 className="font-bold text-lg text-[#2D2D2D] mb-1">{badge.title}</h3>
-              <p className="text-xs text-[#C4A882] font-medium mb-2">{badge.subtitle}</p>
+              <h3 className="mb-1 text-lg font-bold text-[#2D2D2D]">{badge.title}</h3>
+              <p className="mb-2 text-xs font-medium text-[#C4A882]">{badge.subtitle}</p>
               <p className="text-sm text-gray-500">{badge.detail}</p>
             </div>
           ))}
