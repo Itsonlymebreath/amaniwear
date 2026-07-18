@@ -12,7 +12,7 @@ const siteMetadata = {
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
   email: 'contact@amaniwear.ma',
   instagram: 'https://www.instagram.com/amaniwear',
-  whatsapp: '+212XXXXXXXXX',
+  whatsapp: '+212628509959',
   locale: 'ar-MA',
   stickyNav: true,
   analytics: {},
